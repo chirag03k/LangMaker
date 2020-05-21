@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.langconstructor.guicontrollers.HomeScreenController">
+   <children>
+      <Button id="newlanguagebutton" layoutX="303.0" layoutY="326.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="410.0" text="Create a New Language" onAction="#toLanguageEditor"/>
+      <Button id="openlanguagebutton" layoutX="303.0" layoutY="397.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="410.0" text="Open an Existing Language" />
+      <Label layoutX="288.0" layoutY="193.0" prefHeight="58.0" prefWidth="441.0" text="Welcome to LangMaker!" textAlignment="CENTER">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="425.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/icon.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
