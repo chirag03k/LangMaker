@@ -1,5 +1,6 @@
 package com.langconstructor.langcomponents.alphabet;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -7,40 +8,23 @@ public class Alphabet {
 
     List<Phoneme> fullAlphabet;
 
-    boolean split;
-
     List<Phoneme> vowels;
     List<Phoneme> consonants;
 
-    Alphabet(boolean splitVowelsAndConsonants) {
-        split = splitVowelsAndConsonants;
+    public Alphabet() {
+        fullAlphabet = new ArrayList<Phoneme>();
+
     }
 
-    public void addVowel(Vowels vowel, String romanizedSymbol) {
-        if (split) {
-            Phoneme p = new Phoneme(Collections.singletonList((Phone) vowel), romanizedSymbol);
-            vowels.add(p);
-        } else {
-            System.out.println("This alphabet does not have specific vowels or consonants");
-        }
+    public void addPhoneme(List<Phone> phoneList, String romanizedSymbol, String type) {
+
+        Phoneme p = new Phoneme(phoneList, romanizedSymbol, type);
+        fullAlphabet.add(p);
     }
 
-    public void addConsonant(Consonants consonant, String romanizedSymbol) {
-        if (split) {
-            Phoneme p = new Phoneme(Collections.singletonList((Phone) consonant), romanizedSymbol);
-            vowels.add(p);
-        } else {
-            System.out.println("This alphabet does not have specific vowels or consonants");
-        }
-    }
+    public List<Phoneme> getPhonemeList() {
 
-    public void addGenericPhoneme(List<Phone> phoneList, String romanizedSymbol) {
-        if(!split) {
-            Phoneme p = new Phoneme(phoneList, romanizedSymbol);
-            fullAlphabet.add(p);
-        } else {
-            System.out.println("This alphabet specifically distinguishes between vowels and consonants.");
-        }
+        return fullAlphabet;
     }
 
     public static Alphabet generateRandomAlphabet() {

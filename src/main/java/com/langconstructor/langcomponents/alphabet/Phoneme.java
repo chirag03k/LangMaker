@@ -10,13 +10,15 @@ public class Phoneme {
 
     List<Phone> construction;
     String romanization;
+    String type; // vowel, consonant, etc.
 
     FileInputStream pronunciation;
     FileImageInputStream symbol;
 
-    Phoneme(List<Phone> construction, String symbol) {
+    Phoneme(List<Phone> construction, String symbol, String type) {
         this.construction = construction;
         this.romanization = symbol;
+        this.type = type;
     }
 
     public void addPronunciationRecording(String filepath) {
@@ -34,5 +36,15 @@ public class Phoneme {
             System.out.println("Cannot find image at " + filepath);
         }
     }
+
+    @Override
+    public String toString() {
+        StringBuilder result = new StringBuilder(romanization);
+        for(Phone s: construction) {
+            result.append(" ").append(s.getSymbol());
+        }
+        return result.toString();
+    }
+
 
 }

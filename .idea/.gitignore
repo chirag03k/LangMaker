@@ -1,2 +1,5 @@
 **/idea/workspace.xml
 *.iws
+**/build/
+# Default ignored files
+/workspace.xml

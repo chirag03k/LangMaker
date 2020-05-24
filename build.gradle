@@ -6,6 +6,7 @@ plugins {
 }
 
 def mainClass = 'com.langconstructor.main.LangMain'
+
 group 'LangMaker'
 version '1.0-SNAPSHOT'
 
@@ -38,7 +39,7 @@ javafx {
 }
 
 task fatJar(type: Jar) {
-    archiveBaseName = project.name + "-full"
+    archiveBaseName = project.name + "-full" as Property<String>
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
     with jar
     manifest {

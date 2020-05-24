@@ -3,8 +3,9 @@ package com.langconstructor.langcomponents.alphabet;
 public enum Consonants implements Phone {
 
     /*
+    /*
     I basically just iterated through the IPA chart from Wikipedia
-     */
+    */
 
 
     // Starting with the pulmonic consonants
@@ -113,7 +114,7 @@ public enum Consonants implements Phone {
     RETROFLEX_STOP_VOICED("ɖ"),
 
     RETROFLEX_S_FRICATIVE_VOICELESS("ʂ"),
-    RETROFLEX_S_FRICATIVE_VOICED("ʐ"),
+    RETROFLEX_S_FRICATIVE_VOICED("\u0290"),
 
     RETROFLEX_NS_FRICATIVE_VOICED("ɻ˔"),
 
@@ -147,15 +148,15 @@ public enum Consonants implements Phone {
     PALATAL_S_FRICATIVE_VOICED("ʑ"),
 
     PALATAL_NS_FRICATIVE_VOICELESS("ç̠"),
-    PALATAL_NS_FRICATIVE_VOICED("ʝ"),
+    PALATAL_NS_FRICATIVE_VOICED("\u029D"),
 
     PALATAL_APPROXIMANT_VOICELESS("j̊"),
     PALATAL_APPROXIMANT_VOICED("j"),
 
-    PALATAL_LFRIC__VOICELESS("ʎ̝̊"),
-    PALATAL_LFRIC_VOICED("ʎ̝"),
+    PALATAL_LFRIC__VOICELESS("\u028E\u0325\u02D4"),
+    // PALATAL_LFRIC_VOICED("NOT WORKING"), TODO: find unicode
 
-    PALATAL_LAPP_VOICELESS("ʎ̥̥"),
+    PALATAL_LAPP_VOICELESS("\u028E"),
     PALATAL_LAPP_VOICED("ʎ"),
 
     PALATAL_LFLAP_VOICED("ʎ̆"),
@@ -175,10 +176,10 @@ public enum Consonants implements Phone {
     VELAR_APPROXIMANT_VOICELESS("ɰ̠̊"),
     VELAR_APPROXIMANT_VOICED("ɰ"),
 
-    VELAR_LFRIC__VOICELESS("ʟ̝̊"),
-    VELAR_LFRIC_VOICED("ʟ̝"),
+    // VELAR_LFRIC__VOICELESS("THIS DOESN'T WORK AGH"), TODO: find unicode
+    // VELAR_LFRIC_VOICED("CURRENTLY NOT WORKING DO NOT USE"), TODO: find unicode
 
-    VELAR_LAPP_VOICELESS("ʟ̥̝̊"),
+    //VELAR_LAPP_VOICELESS("THIS ONE TOO"), TODO: find unicode
     VELAR_LAPP_VOICED("ʟ"),
 
     VELAR_LFLAP_VOICED("ʟ̆"),
@@ -192,7 +193,7 @@ public enum Consonants implements Phone {
     UVULAR_STOP_VOICED("ɢ"),
 
     UVULAR_NS_FRICATIVE_VOICELESS("χ"),
-    UVULAR_NS_FRICATIVE_VOICED("ʁ"),
+    UVULAR_NS_FRICATIVE_VOICED("\u0281"),
 
     UVULAR_TAP_VOICED("ɢ̆"),
 
@@ -224,6 +225,8 @@ public enum Consonants implements Phone {
 
     GLOTTAL_APPROXIMANT_VOICED("ʔ̞");
 
+
+
     private final String symbol;
 
     Consonants(String s) {
@@ -234,4 +237,11 @@ public enum Consonants implements Phone {
     public String getSymbol() {
         return symbol;
     }
+
+    @Override
+    public String toString() {
+        return symbol;
+    }
+
+
 }

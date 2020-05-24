@@ -4,6 +4,7 @@ public enum Vowels implements Phone {
 
     // TODO: add long/short vowel distinction
 
+
     //              Front                         Central                             Back
 
     // Close
@@ -11,7 +12,7 @@ public enum Vowels implements Phone {
                     CLOSE_FRONT_ROUNDED("y"),   CLOSE_CENTRAL_ROUNDED("ʉ"),     CLOSE_BACK_ROUNDED("u"),
     // Near Close
                     NC_FRONT_UNROUNDED("ɪ"),
-                    NC_FRONT_ROUNDED("ʏ"),                                         NC_BACK_ROUNDED("ʊ"),
+                    NC_FRONT_ROUNDED("\u028f"),                                         NC_BACK_ROUNDED("ʊ"),
 
     // Close-mid
                     CMID_FRONT_UNROUNDED("e"),  CMID_CENTRAL_UNROUNDED("ɘ"),    CMID_BACK_UNROUNDED("ɤ"),
@@ -26,8 +27,8 @@ public enum Vowels implements Phone {
                     OMID_FRONT_ROUNDED("œ"),    OMID_CENTRAL_ROUNDED("ɞ"),      OMID_BACK_ROUNDED("ɔ"),
 
     // Near-open
-                    NO_FRONT_UNROUNDED("æ"),    NO_CENTRAL_UNROUNDED("ɐ"),
-                                                   NO_CENTRAL_ROUNDED("ɐ"),
+                    NO_FRONT_UNROUNDED("æ"),    // NO_CENTRAL_UNROUNDED("NO UNICODE YET"), TODO: find unicode
+                                                   NO_CENTRAL_ROUNDED("\u0250"),
 
     // Open
                     OPEN_FRONT_UNROUNDED("a"),  OPEN_CENTRAL_UNROUNDED("ä"),     OPEN_BACK_UNROUNDED("ɑ"),
@@ -44,6 +45,9 @@ public enum Vowels implements Phone {
         return symbol;
     }
 
-
+    @Override
+    public String toString() {
+        return symbol;
+    }
 
 }

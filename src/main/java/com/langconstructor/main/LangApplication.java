@@ -13,12 +13,14 @@ import java.io.IOException;
 public class LangApplication extends Application {
 
     Stage mainStage;
+    public static boolean running;
     public static Language openedLanguage;
 
     public static final int APP_WIDTH = 1500;
     public static final int APP_HEIGHT = 900;
 
-    public static void main(String[] args) {
+
+    public static void main(String... args) {
         launch(args);
     }
 
@@ -32,6 +34,7 @@ public class LangApplication extends Application {
         mainStage.setTitle("Welcome to LangMaker!");
         mainStage.setScene(scene);
         mainStage.show();
+        running=true;
     }
 
 
