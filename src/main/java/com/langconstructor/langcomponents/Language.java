@@ -6,6 +6,10 @@ public class Language {
 
     public Alphabet alphabet;
 
+    public Language() {
+        createAlphabet();
+    }
+
     public void createAlphabet() {
         alphabet = new Alphabet();
     }

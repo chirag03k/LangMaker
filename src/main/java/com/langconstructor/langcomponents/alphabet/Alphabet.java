@@ -23,10 +23,12 @@ public class Alphabet {
     }
 
     public List<Phoneme> getPhonemeList() {
-
         return fullAlphabet;
     }
 
+    public boolean removePhoneme(Phoneme phoneme) {
+        return fullAlphabet.remove(phoneme);
+    }
     public static Alphabet generateRandomAlphabet() {
         // TODO: create method to generate alphabet once you understand better what phonemes can go together and what phoneme pairs cause problems
 

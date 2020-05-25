@@ -40,9 +40,12 @@ public class Phoneme {
     @Override
     public String toString() {
         StringBuilder result = new StringBuilder(romanization);
+        result.append(" (");
         for(Phone s: construction) {
             result.append(" ").append(s.getSymbol());
         }
+        result.append(")");
+        result.append(" ").append("[").append(type).append("]");
         return result.toString();
     }
 

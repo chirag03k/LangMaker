@@ -39,7 +39,7 @@ javafx {
 }
 
 task fatJar(type: Jar) {
-    archiveBaseName = project.name + "-full" as Property<String>
+    archiveBaseName = project.name + "-full"
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
     with jar
     manifest {

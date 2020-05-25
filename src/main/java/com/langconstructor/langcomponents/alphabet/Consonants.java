@@ -2,6 +2,7 @@ package com.langconstructor.langcomponents.alphabet;
 
 public enum Consonants implements Phone {
 
+    // TODO: Strings aren't working to represent IPA symbols. Fix with alt codes?
     /*
     /*
     I basically just iterated through the IPA chart from Wikipedia
@@ -87,7 +88,7 @@ public enum Consonants implements Phone {
     ALVEOLAR_TRILL_VOICELESS("r̥"),
     ALVEOLAR_TRILL_VOICED("r"),
 
-    ALVEOLAR_LFRIC__VOICELESS("ɬ"),
+    ALVEOLAR_LFRIC_VOICELESS("ɬ"),
     ALVEOLAR_LFRIC_VOICED("ɮ"),
 
     ALVEOLAR_LAPP_VOICELESS("l̥"),
@@ -127,7 +128,7 @@ public enum Consonants implements Phone {
     RETROFLEXTRILL_VOICELESS("ɽ̊r̥"),
     RETROFLEX_TRILL_VOICED("ɽr"),
 
-    RETROFLEX_LFRIC__VOICELESS("ɭ̊˔"),
+    RETROFLEX_LFRIC_VOICELESS("ɭ̊˔"),
     RETROFLEX_LFRIC_VOICED("ɭ˔"),
 
     RETROFLEX_LAPP_VOICELESS("ɭ̊"),
@@ -153,7 +154,7 @@ public enum Consonants implements Phone {
     PALATAL_APPROXIMANT_VOICELESS("j̊"),
     PALATAL_APPROXIMANT_VOICED("j"),
 
-    PALATAL_LFRIC__VOICELESS("\u028E\u0325\u02D4"),
+    PALATAL_LFRIC_VOICELESS("\u028E\u0325\u02D4"),
     // PALATAL_LFRIC_VOICED("NOT WORKING"), TODO: find unicode
 
     PALATAL_LAPP_VOICELESS("\u028E"),
@@ -176,7 +177,7 @@ public enum Consonants implements Phone {
     VELAR_APPROXIMANT_VOICELESS("ɰ̠̊"),
     VELAR_APPROXIMANT_VOICED("ɰ"),
 
-    // VELAR_LFRIC__VOICELESS("THIS DOESN'T WORK AGH"), TODO: find unicode
+    // VELAR_LFRIC_VOICELESS("THIS DOESN'T WORK AGH"), TODO: find unicode
     // VELAR_LFRIC_VOICED("CURRENTLY NOT WORKING DO NOT USE"), TODO: find unicode
 
     //VELAR_LAPP_VOICELESS("THIS ONE TOO"), TODO: find unicode
@@ -223,9 +224,11 @@ public enum Consonants implements Phone {
     GLOTTAL_NS_FRICATIVE_VOICELESS("h"),
     GLOTTAL_NS_FRICATIVE_VOICED("ɦ"),
 
-    GLOTTAL_APPROXIMANT_VOICED("ʔ̞");
+    GLOTTAL_APPROXIMANT_VOICED("ʔ̞"),
 
 
+    // UTILITY
+    NULL_CONSONANT("");
 
     private final String symbol;
 
