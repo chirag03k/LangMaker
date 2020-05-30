@@ -17,7 +17,7 @@ public class LangApplication extends Application {
     public static Language openedLanguage;
 
     public static final int APP_WIDTH = 1500;
-    public static final int APP_HEIGHT = 900;
+    public static final int APP_HEIGHT = 930;
 
 
     public static void main(String... args) {

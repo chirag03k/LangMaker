@@ -23,13 +23,13 @@
                 </content>
             </ScrollPane>
             <Button fx:id="removePhonemeButton" layoutX="1043.0" layoutY="825.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="122.0" text="Remove Selected" onAction="#removePhoneme"/>
-            <TextField fx:id="newPhonemeSymbol" layoutX="552.0" layoutY="767.0" prefHeight="25.0" prefWidth="184.0" />
             <Label layoutX="446.0" layoutY="726.0" prefHeight="19.0" prefWidth="69.0" text="IPA Symbol" />
             <Label layoutX="446.0" layoutY="771.0" text="Roman Form" />
             <Button layoutX="626.0" layoutY="825.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="117.0" text="Add Phoneme" onAction="#addPhoneme" />
-      <TextField id="typeBox" fx:id="newPhonemeType" layoutX="551.0" layoutY="671.0" prefHeight="25.0" prefWidth="184.0" />
-      <Label layoutX="446.0" layoutY="674.0" prefHeight="19.0" prefWidth="69.0" text="Type" />
-      <Label fx:id="pronunciationLabel" layoutX="552.0" layoutY="718.0" />
+            <TextField id="typeBox" fx:id="newPhonemeType" layoutX="551.0" layoutY="671.0" prefHeight="25.0" prefWidth="185.0" />
+            <TextField fx:id="pronunciationLabel" layoutX="552.0" layoutY="718.0" prefHeight="25.0" prefWidth="185.0"/>
+            <TextField fx:id="newPhonemeSymbol" layoutX="552.0" layoutY="767.0" prefHeight="25.0" prefWidth="185.0" />
+            <Label layoutX="446.0" layoutY="674.0" prefHeight="19.0" prefWidth="69.0" text="Type" />
       <TableView fx:id="consonantsTable" layoutX="48.0" layoutY="91.0" prefHeight="299.0" prefWidth="703.0">
         <columns>
 

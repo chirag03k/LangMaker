@@ -31,7 +31,7 @@ public class PhonologyTabController {
     @FXML
     private Button removePhonemeButton;
     @FXML
-    private Label pronunciationLabel;
+    private TextField pronunciationLabel;
     @FXML
     private TextField newPhonemeSymbol;
     @FXML
@@ -71,7 +71,7 @@ public class PhonologyTabController {
 
     @FXML
     private void showConsonant() {
-        ObservableList<TablePosition> selectedCells = consonantsTable.getSelectionModel().getSelectedCells() ;
+        ObservableList<TablePosition> selectedCells = consonantsTable.getSelectionModel().getSelectedCells();
         TablePosition selectedCell = selectedCells.get(0);
         TableColumn column = selectedCell.getTableColumn();
         int rowIndex = selectedCell.getRow();
@@ -83,7 +83,11 @@ public class PhonologyTabController {
 
     @FXML
     private void showVowel() {
-        Phone v = vowelsTable.getSelectionModel().getSelectedItem();
+        ObservableList<TablePosition> selectedCells = vowelsTable.getSelectionModel().getSelectedCells();
+        TablePosition selectedCell = selectedCells.get(0);
+        TableColumn column = selectedCell.getTableColumn();
+        int rowIndex = selectedCell.getRow();
+        Phone v = (Phone) column.getCellObservableValue(rowIndex).getValue();
         String curPron = pronunciationLabel.getText();
         pronunciationLabel.setText(curPron+v.getSymbol());
         currentPronunciation.add(v);
@@ -98,7 +102,6 @@ public class PhonologyTabController {
     }
 
     private void populateTableViews() {
-        // TODO: POPULATE TABLEVIEWS
 
         consonantsTable.getSelectionModel().setCellSelectionEnabled(true);
         vowelsTable.getSelectionModel().setCellSelectionEnabled(true);
@@ -176,15 +179,15 @@ public class PhonologyTabController {
                 new PropertyValueFactory<ConsonantRow, Consonants>("postAlveolarVoiced")
         );
 
-        TableColumn retroflexCol = new TableColumn("retroflex");
+        TableColumn retroflexCol = new TableColumn("RetroFlex");
         TableColumn retroflexUnvoicedCol = new TableColumn("Unvoiced");
         TableColumn retroflexVoicedCol = new TableColumn("Voiced");
         retroflexCol.getColumns().addAll(retroflexUnvoicedCol, retroflexVoicedCol);
         retroflexUnvoicedCol.setCellValueFactory(
-                new PropertyValueFactory<ConsonantRow, Consonants>("retroflexUnvoiced")
+                new PropertyValueFactory<ConsonantRow, Consonants>("retroFlexUnvoiced")
         );
         retroflexVoicedCol.setCellValueFactory(
-                new PropertyValueFactory<ConsonantRow, Consonants>("retroflexVoiced")
+                new PropertyValueFactory<ConsonantRow, Consonants>("retroFlexVoiced")
         );
 
         TableColumn palatalCol = new TableColumn("palatal");
@@ -396,13 +399,13 @@ public class PhonologyTabController {
                         Consonants.NULL_CONSONANT,
                         Consonants.RETROFLEX_FLAP_VOICELESS,
                         Consonants.RETROFLEX_FLAP_VOICED,
-                       Consonants.NULL_CONSONANT,
-                       Consonants.NULL_CONSONANT,
-                       Consonants.NULL_CONSONANT,
-                       Consonants.NULL_CONSONANT,
-                       Consonants.NULL_CONSONANT,
-                       Consonants.NULL_CONSONANT,
-                       Consonants.NULL_CONSONANT,
+                        Consonants.NULL_CONSONANT,
+                        Consonants.NULL_CONSONANT,
+                        Consonants.NULL_CONSONANT,
+                        Consonants.NULL_CONSONANT,
+                        Consonants.NULL_CONSONANT,
+                        Consonants.NULL_CONSONANT,
+                        Consonants.NULL_CONSONANT,
                         Consonants.EPIGLOTTAL_FLAP_VOICED,
                         Consonants.NULL_CONSONANT,
                         Consonants.NULL_CONSONANT
@@ -451,15 +454,15 @@ public class PhonologyTabController {
                         Consonants.RETROFLEX_LFRIC_VOICELESS,
                         Consonants.RETROFLEX_LFRIC_VOICED,
                         Consonants.PALATAL_LFRIC_VOICELESS,
-                       Consonants.NULL_CONSONANT,
-                       Consonants.NULL_CONSONANT,
-                       Consonants.NULL_CONSONANT,
-                       Consonants.NULL_CONSONANT,
-                       Consonants.NULL_CONSONANT,
-                       Consonants.NULL_CONSONANT,
-                       Consonants.NULL_CONSONANT,
-                       Consonants.NULL_CONSONANT,
-                       Consonants.NULL_CONSONANT
+                        Consonants.NULL_CONSONANT,
+                        Consonants.NULL_CONSONANT,
+                        Consonants.NULL_CONSONANT,
+                        Consonants.NULL_CONSONANT,
+                        Consonants.NULL_CONSONANT,
+                        Consonants.NULL_CONSONANT,
+                        Consonants.NULL_CONSONANT,
+                        Consonants.NULL_CONSONANT,
+                        Consonants.NULL_CONSONANT
                 ),
                 new ConsonantRow(
                         (StringProperty) new SimpleStringProperty("LAPP"),
@@ -517,12 +520,12 @@ public class PhonologyTabController {
                 )
 
 
-                // TODO: add all rows
+                // TODO: add Vowels Table
+
+                // Vowels Table
         );
 
         consonantsTable.setItems(consonantTableData);
-
-
 
     }
 
