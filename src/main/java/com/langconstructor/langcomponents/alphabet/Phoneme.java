@@ -11,6 +11,7 @@ public class Phoneme {
     List<Phone> construction;
     String romanization;
     String type; // vowel, consonant, etc.
+    public String notes = "";
 
     FileInputStream pronunciation;
     FileImageInputStream symbol;
@@ -50,5 +51,8 @@ public class Phoneme {
         return result.toString();
     }
 
+    public void setNotes(String notes) {
+        this.notes = notes;
+    }
 
 }

@@ -6,6 +6,8 @@ import com.langconstructor.langcomponents.alphabet.*;
 import com.langconstructor.main.LangApplication;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -24,6 +26,13 @@ public class PhonologyTabController {
         language = LangApplication.openedLanguage;
         populateTableViews();
         displayAlphabet();
+
+        phonemeList.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Phoneme>() {
+            @Override
+            public void changed(ObservableValue<? extends Phoneme> observable, Phoneme oldValue, Phoneme newValue) {
+                noteBox.setText(newValue.notes);
+            }
+        });
     }
 
     @FXML
@@ -40,6 +49,8 @@ public class PhonologyTabController {
     private TableView consonantsTable;
     @FXML
     private TableView<Phone> vowelsTable;
+    @FXML
+    private TextArea noteBox;
 
     @FXML
     private void displayAlphabet() {
@@ -99,6 +110,14 @@ public class PhonologyTabController {
 
         language.alphabet.removePhoneme(p);
         displayAlphabet();
+    }
+
+    @FXML
+    private void addNotes() {
+        String newNotes = noteBox.getText();
+
+        Phoneme p = phonemeList.getSelectionModel().getSelectedItem();
+        p.setNotes(newNotes);
     }
 
     private void populateTableViews() {
