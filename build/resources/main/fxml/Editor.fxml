@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="930.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.langconstructor.gui.EditorController">
+<AnchorPane prefHeight="930.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.chiragkawediya.langmaker.gui.EditorController">
    <children>
       <MenuBar prefHeight="25.0" prefWidth="1501.0">
         <menus>

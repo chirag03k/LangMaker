@@ -6,7 +6,7 @@ plugins {
     id "info.zthings.gradletodo" version "1.0"
 }
 
-def mainClass = 'com.langconstructor.main.LangMain'
+def mainClass = 'com.chiragkawediya.langmaker.main.LangMain'
 
 group 'LangMaker'
 version '1.0-SNAPSHOT'

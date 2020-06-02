@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="550.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.langconstructor.gui.HomeScreenController">
+<AnchorPane prefHeight="550.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.chiragkawediya.langmaker.gui.HomeScreenController">
    <children>
       <Button id="newlanguagebutton" layoutX="303.0" layoutY="326.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="410.0" text="Create a New Language" onAction="#toLanguageEditor"/>
       <Button id="openlanguagebutton" layoutX="303.0" layoutY="397.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="410.0" text="Open an Existing Language" />

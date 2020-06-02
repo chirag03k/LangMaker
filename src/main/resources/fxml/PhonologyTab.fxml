@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1001.0" prefWidth="1502.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.langconstructor.gui.PhonologyTabController">
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1001.0" prefWidth="1502.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.chiragkawediya.langmaker.gui.PhonologyTabController">
         <children>
             <Label layoutX="1027.0" layoutY="44.0" prefHeight="47.0" prefWidth="154.0" text="Current Alphabet" textAlignment="CENTER">
                 <font>

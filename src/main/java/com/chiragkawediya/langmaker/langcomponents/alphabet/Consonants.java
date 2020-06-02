@@ -1,0 +1,250 @@
+package com.chiragkawediya.langmaker.langcomponents.alphabet;
+
+public enum Consonants implements Phone {
+
+    // TODO: Strings aren't working to represent IPA symbols. Fix with alt codes?
+    /*
+    /*
+    I basically just iterated through the IPA chart from Wikipedia
+    */
+
+
+    // Starting with the pulmonic consonants
+
+
+    //Bilabial
+
+    BILIABIAL_NASAL_VOICELESS("m̥"),
+    BILABIAL_NASAL_VOICED("m"),
+
+    BILABIAL_STOP_VOICELESS("p"),
+    BILABIAL_STOP_VOICED("b"),
+
+    BILABIAL_FRICATIVE_VOICELESS("ɸ"),
+    BILABIAL_FRICATIVE_VOICED("β"),
+
+    BILABIAL_FLAP_VOICED("ⱱ̟"),
+
+    BILABIAL_TRILL_VOICELESS("ʙ̥"),
+    BILABIAL_TRILL_VOICED("B"),
+
+
+    //Labiodental
+
+    LABIODENTAL_NASAL_VOICED("ɱ"),
+
+    LABIODENTAL_STOP_VOICELESS("p̪"),
+    LABIODENTAL_STOP_VOICED("b̪"),
+
+
+    LABIODENTAL_FRICATIVE_VOICELESS("f"),
+    LABIODENTAL_FRICATIVE_VOICED("v"),
+
+
+    LABIODENTAL_FLAP_VOICED("ⱱ"),
+
+    LABIODENTAL_APPROXIMANT_VOICELESS("ʋ̥"),
+    LABIODENTAL_APPROXIMANT_VOICED("ʋ"),
+
+    //Linguolabial
+
+    LINGUOLABIAL_NASAL_VOICED("n̼"),
+
+    LINGUOLABIAL_STOP_VOICELESS("t̼"),
+    LINGUOLABIAL_STOP_VOICED("d̼"),
+
+    LINGUOLABIAL_NS_FRICATIVE_VOICELESS("θ̼"),
+    LINGUOLABIAL_NS_FRICATIVE_VOICED("ð̼"),
+
+    LINGUOLABIAL_FLAP_VOICELESS("ɾ̼"),
+
+
+    //DENTAL
+
+    DENTAL_NS_FRICATIVE_VOICELESS("θ"),
+    DENTAL_NS_FRICATIVE_VOICED("ð"),
+
+
+    //ALVEOLAR
+
+    ALVEOLAR_NASAL_VOICELESS("n̥"),
+    ALVEOLAR_NASAL_VOICED("n"),
+
+    ALVEOLAR_STOP_VOICELESS("t"),
+    ALVEOLAR_STOP_VOICED("d"),
+
+    ALVEOLAR_S_FRICATIVE_VOICELESS("s"),
+    ALVEOLAR_S_FRICATIVE_VOICED("z"),
+
+    ALVEOLAR_NS_FRICATIVE_VOICELESS("θ̠"),
+    ALVEOLAR_NS_FRICATIVE_VOICED("ð̠"),
+
+    ALVEOLAR_APPROXIMANT_VOICELESS("ɹ̥"),
+    ALVEOLAR_APPROXIMANT_VOICED("ɹ"),
+
+    ALVEOLAR_FLAP_VOICELESS("ɾ̥"),
+    ALVEOLAR_FLAP_VOICED("ɾ"),
+
+    ALVEOLAR_TRILL_VOICELESS("r̥"),
+    ALVEOLAR_TRILL_VOICED("r"),
+
+    ALVEOLAR_LFRIC_VOICELESS("ɬ"),
+    ALVEOLAR_LFRIC_VOICED("ɮ"),
+
+    ALVEOLAR_LAPP_VOICELESS("l̥"),
+    ALVEOLAR_LAPP_VOICED("l"),
+
+    ALVEOLAR_LFLAP_VOICED("ɺ"),
+
+
+    // Post-Alveolar
+
+    POSTALVEOLAR_S_FRICATIVE_VOICELESS("ʃ"),
+    POSTALVEOLAR_S_FRICATIVE_VOICED("ʒ"),
+
+    POSTALVEOLAR_NS_FRICATIVE_VOICELESS("ɹ̠̊˔"),
+    POSTALVEOLAR_NS_FRICATIVE_VOICED("ɹ̠˔"),
+
+
+    // Retroflex
+
+    RETROFLEX_NASAL_VOICELESS("ɳ̥̊"),
+    RETROFLEX_NASAL_VOICED("ɳ"),
+
+    RETROFLEX_STOP_VOICELESS("ʈ"),
+    RETROFLEX_STOP_VOICED("ɖ"),
+
+    RETROFLEX_S_FRICATIVE_VOICELESS("ʂ"),
+    RETROFLEX_S_FRICATIVE_VOICED("\u0290"),
+
+    RETROFLEX_NS_FRICATIVE_VOICED("ɻ˔"),
+
+    RETROFLEX_APPROXIMANT_VOICELESS("ɻ̊"),
+    RETROFLEX_APPROXIMANT_VOICED("ɻ"),
+
+    RETROFLEX_FLAP_VOICELESS("ɽ̊"),
+    RETROFLEX_FLAP_VOICED("ɽ"),
+
+    RETROFLEXTRILL_VOICELESS("ɽ̊r̥"),
+    RETROFLEX_TRILL_VOICED("ɽr"),
+
+    RETROFLEX_LFRIC_VOICELESS("ɭ̊˔"),
+    RETROFLEX_LFRIC_VOICED("ɭ˔"),
+
+    RETROFLEX_LAPP_VOICELESS("ɭ̊"),
+    RETROFLEX_LAPP_VOICED("ɭ"),
+
+    RETROFLEX_LFLAP_VOICED("ɭ̆"),
+
+
+    // Palatal
+
+    PALATAL_NASAL_VOICELESS("ɲ̊"),
+    PALATAL_NASAL_VOICED("ɲ"),
+
+    PALATAL_STOP_VOICELESS("c"),
+    PALATAL_STOP_VOICED("ɟ"),
+
+    PALATAL_S_FRICATIVE_VOICELESS("ɕ"),
+    PALATAL_S_FRICATIVE_VOICED("ʑ"),
+
+    PALATAL_NS_FRICATIVE_VOICELESS("ç̠"),
+    PALATAL_NS_FRICATIVE_VOICED("\u029D"),
+
+    PALATAL_APPROXIMANT_VOICELESS("j̊"),
+    PALATAL_APPROXIMANT_VOICED("j"),
+
+    PALATAL_LFRIC_VOICELESS("\u028E\u0325\u02D4"),
+    // PALATAL_LFRIC_VOICED("NOT WORKING"), TODO: find unicode
+
+    PALATAL_LAPP_VOICELESS("\u028E"),
+    PALATAL_LAPP_VOICED("ʎ"),
+
+    PALATAL_LFLAP_VOICED("ʎ̆"),
+
+
+    // Velar
+
+    VELAR_NASAL_VOICELESS("ŋ̊"),
+    VELAR_NASAL_VOICED("ɲ"),
+
+    VELAR_STOP_VOICELESS("k"),
+    VELAR_STOP_VOICED("g"),
+
+    VELAR_NS_FRICATIVE_VOICELESS("x"),
+    VELAR_NS_FRICATIVE_VOICED("ɣ"),
+
+    VELAR_APPROXIMANT_VOICELESS("ɰ̠̊"),
+    VELAR_APPROXIMANT_VOICED("ɰ"),
+
+    // VELAR_LFRIC_VOICELESS("THIS DOESN'T WORK AGH"), TODO: find unicode
+    // VELAR_LFRIC_VOICED("CURRENTLY NOT WORKING DO NOT USE"), TODO: find unicode
+
+    //VELAR_LAPP_VOICELESS("THIS ONE TOO"), TODO: find unicode
+    VELAR_LAPP_VOICED("ʟ"),
+
+    VELAR_LFLAP_VOICED("ʟ̆"),
+
+
+    // Uvular
+
+    UVULAR_NASAL_VOICED("ɴ"),
+
+    UVULAR_STOP_VOICELESS("q"),
+    UVULAR_STOP_VOICED("ɢ"),
+
+    UVULAR_NS_FRICATIVE_VOICELESS("χ"),
+    UVULAR_NS_FRICATIVE_VOICED("\u0281"),
+
+    UVULAR_TAP_VOICED("ɢ̆"),
+
+    UVULAR_TRILL_VOICELESS("ʀ̥"),
+    UVULAR_TRILL_VOICED("ʀ"),
+
+    UVULAR_LAPP_VOICED("ʟ̠"),
+
+
+    // Epliglottal
+
+    EPLIGOTTAL_STOP_VOICELESS("ʡ"),
+
+    EPIGLOTTAL_NS_FRICATIVE_VOICELESS("ħ"),
+    EPILGLOTTAL_NS_FRICATIVE_VOICED("ʕ"),
+
+    EPIGLOTTAL_FLAP_VOICED("ʡ̆"),
+
+    EPIGLOTTAL_TRILL_VOICELESS("ʜ"),
+    EPLIGLOTTAL_GRILL_VOICED("ʢ"),
+
+
+    // Glottal
+
+    GLOTTAL_STOP_VOICELESS("ʔ"),
+
+    GLOTTAL_NS_FRICATIVE_VOICELESS("h"),
+    GLOTTAL_NS_FRICATIVE_VOICED("ɦ"),
+
+    GLOTTAL_APPROXIMANT_VOICED("ʔ̞"),
+
+
+    // UTILITY
+    NULL_CONSONANT("");
+
+    private final String symbol;
+
+    Consonants(String s) {
+        this.symbol = s;
+    }
+
+    @Override
+    public String getSymbol() {
+        return symbol;
+    }
+
+    @Override
+    public String toString() {
+        return symbol;
+    }
+
+
+}
